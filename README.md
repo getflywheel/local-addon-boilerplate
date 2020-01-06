@@ -28,7 +28,7 @@ Clone the repository into the following directory depending on your platform:
 
 ### Folder Structure
 
-All files in `/src` will be transpiled to `/lib` using [Babel](https://github.com/babel/babel/). Anything in `/lib` will be overwritten.
+All files in `/src` will be transpiled to `/lib` using [TypeScript](https://www.typescriptlang.org/). Anything in `/lib` will be overwritten.
 
 ## License
 
