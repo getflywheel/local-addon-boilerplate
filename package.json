@@ -8,6 +8,7 @@
 	],
 	"bgColor": "#51bb7b",
 	"icon": "icon.svg",
+	"slug": "boilerplate",
 	"description": "A quick start to your amazing addon!",
 	"renderer": "lib/renderer.js",
 	"main": "lib/main.js",
