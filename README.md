@@ -1,5 +1,7 @@
 # Local Boilerplate Add-on
 
+https://build.localwp.com/
+
 ## Add-on Generator
 
 There is a [Local Add-on Yeoman Generator](https://github.com/getflywheel/create-local-addon) available.
@@ -24,9 +26,19 @@ Clone the repository into the following directory depending on your platform:
 1. Clone repo directly into the add-ons folder (paths described above)
 2. `yarn install`
 2. `yarn build` or `npm run build`
-3. Open Local and activate add-on
+3. Open Local and enable add-on
 
 ## Development
+
+### External Libraries
+
+- @getflywheel/local provides type definitions for Local's Add-on API.
+	- Node Module: https://www.npmjs.com/package/@getflywheel/local-components
+	- GitHub Repo: https://github.com/getflywheel/local-components
+
+- @getflywheel/local-components provides reusable React components to use in your Local add-on.
+	- Node Module: https://www.npmjs.com/package/@getflywheel/local
+	- GitHub Repo: https://github.com/getflywheel/local-addon-api
 
 ### Folder Structure
 
