@@ -1,4 +1,8 @@
-# Local Boilerplate Addon
+# Local Boilerplate Add-on
+
+## Add-on Generator
+
+There is a [Local Add-on Yeoman Generator](https://github.com/getflywheel/create-local-addon) available.
 
 ## Installation
 
@@ -7,6 +11,7 @@
 Clone the repository into the following directory depending on your platform:
 
 -   macOS: `~/Library/Application Support/Local Beta/addons`
+-   Windows: `C:\Users\username\AppData\Roaming\Local\addons`
 
 ### Install Dependencies
 
@@ -14,21 +19,20 @@ Clone the repository into the following directory depending on your platform:
 
 ### Add to Local
 
-1. `npm pack`
-2. Install the newly generated tarball from disk within Local
-
-### Alternate Method to Add to Local
-
-1. Clone repo directly into the addons folder (paths described above)
+1. Clone repo directly into the add-ons folder (paths described above)
 2. `yarn install`
-2. `npm run build`
-3. Open Local and activate addon
+2. `yarn build` or `npm run build`
+3. Open Local and activate add-on
 
 ## Development
 
 ### Folder Structure
 
 All files in `/src` will be transpiled to `/lib` using [TypeScript](https://www.typescriptlang.org/). Anything in `/lib` will be overwritten.
+
+### Development Workflow
+
+If you are looking for help getting started, you can consult [the documentation for the add-on generator](https://github.com/getflywheel/create-local-addon#next-steps).
 
 ## License
 
