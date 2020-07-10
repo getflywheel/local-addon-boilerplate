@@ -10,8 +10,10 @@ There is a [Local Add-on Yeoman Generator](https://github.com/getflywheel/create
 
 Clone the repository into the following directory depending on your platform:
 
--   macOS: `~/Library/Application Support/Local Beta/addons`
+-   macOS: `~/Library/Application Support/Local/addons`
 -   Windows: `C:\Users\username\AppData\Roaming\Local\addons`
+
+*You can replace 'Local' with 'Local Beta' if you want to create the add-on for Local Beta.*
 
 ### Install Dependencies
 
