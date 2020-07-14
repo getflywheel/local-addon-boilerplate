@@ -1,3 +1,4 @@
+import * as LocalRenderer from '@getflywheel/local/renderer';
 import React, { Component } from 'react';
 import { ipcRenderer } from 'electron';
 import { Button } from '@getflywheel/local-components';
@@ -7,14 +8,19 @@ export default class Boilerplate extends Component {
 		super(props);
 
 		this.state = {
-			//siteId: this.props.sites,
-			count: 0,
+			siteId: props.match.params.siteID,
+			count: this.fetchCount(),
 		};
 
 		this.renderCount = this.renderCount.bind(this);
 		this.increaseCount = this.increaseCount.bind(this);
 		this.decreaseCount = this.decreaseCount.bind(this);
 		this.saveCount = this.saveCount.bind(this);
+	}
+
+	fetchCount() {
+		const site = this.props.sites[this.props.match.params.siteID],
+		return site.count ?? 0;
 	}
 
 	saveCount() {
@@ -48,8 +54,11 @@ export default class Boilerplate extends Component {
             <div style={{ flex: '1', overflowY: 'auto', margin: '10px' }}>
                 <h2>Hello, World!</h2>
 				{this.renderCount()}
-				<Button onClick={this.increaseCount}>Increment Count</Button>
-				<Button onClick={this.saveCount}>Save Count for Site -{this.state.siteId}-</Button>
+				<div>
+					<Button onClick={this.increaseCount}>Increment Count</Button> &nbsp;
+					<Button onClick={this.decreaseCount}>Decrement Count</Button> &nbsp;
+					<Button onClick={this.saveCount}>Save Count</Button>
+				</div>
             </div>
         )
     }
