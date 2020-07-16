@@ -12,9 +12,10 @@ export default class Boilerplate extends Component {
 			count: this.fetchCount(),
 		};
 
-		this.renderCount = this.renderCount.bind(this);
+		// this.renderCount = this.renderCount.bind(this);
 		this.increaseCount = this.increaseCount.bind(this);
 		this.decreaseCount = this.decreaseCount.bind(this);
+		this.randomlySetCount = this.randomlySetCount.bind(this);
 		this.saveCount = this.saveCount.bind(this);
 	}
 
@@ -45,6 +46,13 @@ export default class Boilerplate extends Component {
 		});
 	}
 
+	async randomlySetCount() {
+		const newCount = await LocalRenderer.ipcAsync('get-random-count');
+		this.setState({
+			count: newCount,
+		});
+	}
+
 	renderCount() {
 		return <p>Count: {this.state.count}</p>;
 	}
@@ -57,6 +65,7 @@ export default class Boilerplate extends Component {
 				<div>
 					<Button onClick={this.increaseCount}>Increment Count</Button> &nbsp;
 					<Button onClick={this.decreaseCount}>Decrement Count</Button> &nbsp;
+					<Button onClick={this.randomlySetCount}>Randomize Count</Button> &nbsp;
 					<Button onClick={this.saveCount}>Save Count</Button>
 				</div>
             </div>
