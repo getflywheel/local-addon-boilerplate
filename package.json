@@ -22,6 +22,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsc",
+		"prepare": "tsc",
 		"watch": "yarn run build --watch"
 	},
 	"devDependencies": {
