@@ -82,12 +82,21 @@ export default class Boilerplate extends Component {
 				isOpen={this.state.showInstructions}
 				onRequestClose={this.hideInstructions}
 			>
-				<Title>Boilerplate Add-on</Title>
-				<Text>You just saved the count for this site! You can exit this add-on and return to find the count will remain the same (but only if you save!).</Text>
-				<Text>This is a boilerplate add-on to help you get started with development.</Text>
-				<Text>You will find a few examples in this add-on related to using Local Components, the Local add-on API, and other useful tools for making your add-on awesome!</Text>
-				<Text>Visit https://localwp.com/get-involved for more information about making an add-on for Local.</Text>
-				<Text>We can't wait to see what you create!</Text>
+				<Title fontSize='xl'>Boilerplate Add-on</Title>
+				<div style={{padding: '20px'}}>
+					<Text
+						fontSize='l'
+						privateOptions={{
+							fontWeight: 'medium',
+						}}
+					>
+						You just saved the count for this site! You can exit this add-on and return to find the count will remain the same (but only if you save!).
+						This is a boilerplate add-on to help you get started with development.
+						You will find a few examples in this add-on related to using Local Components, the Local add-on API, and other useful tools for making your add-on awesome!
+						Visit <a href='https://localwp.com/get-involved'>the Local webpage about add-ons</a> for more information about making an add-on for Local.
+						We can't wait to see what you create!
+					</Text>
+				</div>
 			</FlyModal>
 		)
 	}
