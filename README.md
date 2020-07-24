@@ -14,6 +14,7 @@ Clone the repository into the following directory depending on your platform:
 
 -   macOS: `~/Library/Application Support/Local/addons`
 -   Windows: `C:\Users\username\AppData\Roaming\Local\addons`
+-   Debian Linux: `~/.config/Local/addons`
 
 *You can replace 'Local' with 'Local Beta' if you want to create the add-on for Local Beta.*
 
