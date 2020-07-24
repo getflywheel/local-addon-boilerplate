@@ -1,6 +1,10 @@
-import * as LocalRenderer from '@getflywheel/local/renderer';
 import React, { Component } from 'react';
 import { ipcRenderer } from 'electron';
+
+// https://getflywheel.github.io/local-addon-api/modules/_local_renderer_.html
+import * as LocalRenderer from '@getflywheel/local/renderer';
+
+// https://github.com/getflywheel/local-components
 import { Button, FlyModal, Title, Text } from '@getflywheel/local-components';
 
 export default class Boilerplate extends Component {

@@ -48,6 +48,8 @@ All files in `/src` will be transpiled to `/lib` using [TypeScript](https://www.
 
 If you are looking for help getting started, you can consult [the documentation for the add-on generator](https://github.com/getflywheel/create-local-addon#next-steps).
 
+You can consult the [Local add-on API](https://getflywheel.github.io/local-addon-api), which provides a wide range of values and functions for developing your add-on.
+
 ## License
 
 MIT
