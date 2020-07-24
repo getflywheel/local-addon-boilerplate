@@ -39,6 +39,7 @@ Clone the repository into the following directory depending on your platform:
 - @getflywheel/local-components provides reusable React components to use in your Local add-on.
 	- Node Module: https://www.npmjs.com/package/@getflywheel/local
 	- GitHub Repo: https://github.com/getflywheel/local-addon-api
+	- Style Guide: https://getflywheel.github.io/local-components
 
 ### Folder Structure
 
