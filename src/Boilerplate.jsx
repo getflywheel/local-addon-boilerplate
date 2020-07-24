@@ -112,8 +112,8 @@ export default class Boilerplate extends Component {
 				{this.renderInstructions()}
 				{this.renderCount()}
 				<div>
-					<Button onClick={this.increaseCount}>Increment Count</Button> &nbsp;
 					<Button onClick={this.decreaseCount}>Decrement Count</Button> &nbsp;
+					<Button onClick={this.increaseCount}>Increment Count</Button> &nbsp;
 					<Button onClick={this.randomlySetCount}>Randomize Count</Button> &nbsp;
 					<Button onClick={this.saveCount}>Save Count</Button>
 				</div>
