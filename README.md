@@ -2,9 +2,11 @@
 
 https://build.localwp.com/
 
-## Add-on Generator
+## Get Started with the Local Add-on Generator
 
-There is a [Local Add-on Yeoman Generator](https://github.com/getflywheel/create-local-addon) available.
+Get up and running with your new add-on quickly and easily with the [Local Add-on Generator](https://github.com/getflywheel/create-local-addon). It is super simple to set up, and can help you start developing your new add-on in no time!
+
+The generator uses this boilerplate add-on to get you started, making setup easy and fast. The README for the generator also has more information on how to create an amazing add-on for Local, so be sure to check it out!
 
 ## Installation
 
