@@ -18,14 +18,14 @@ Clone the repository into the following directory depending on your platform:
 
 *You can replace 'Local' with 'Local Beta' if you want to create the add-on for Local Beta.*
 
-### Install Dependencies
+### Install Add-on Dependencies
 
-1. `yarn install`
+`yarn install` or `npm install`
 
-### Add to Local
+### Add Add-on to Local
 
 1. Clone repo directly into the add-ons folder (paths described above)
-2. `yarn install`
+2. `yarn install` or `npm install` (install dependencies)
 2. `yarn build` or `npm run build`
 3. Open Local and enable add-on
 
