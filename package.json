@@ -2,12 +2,13 @@
 	"name": "boilterplate",
 	"productName": "Boilerplate",
 	"version": "1.0.0",
-	"author": "Coulter Peterson",
+	"author": "Local Team",
 	"keywords": [
 		"local-addon"
 	],
 	"bgColor": "#51bb7b",
 	"icon": "icon.svg",
+	"slug": "boilerplate",
 	"description": "A quick start to your amazing addon!",
 	"renderer": "lib/renderer.js",
 	"main": "lib/main.js",
@@ -21,11 +22,12 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "tsc",
+		"prepare": "tsc",
 		"watch": "yarn run build --watch"
 	},
 	"devDependencies": {
 		"@getflywheel/eslint-config-local": "1.0.4",
-		"@getflywheel/local": "^5.1.0-alpha.7",
+		"@getflywheel/local": "^5.0.0",
 		"@types/classnames": "^2.2.9",
 		"@types/dateformat": "^3.0.1",
 		"@types/node": "^12.7.12",
@@ -40,9 +42,10 @@
 		"react-router-dom": "^4.3.1"
 	},
 	"dependencies": {
-		"@getflywheel/local-components": "^11.0.0",
+		"@getflywheel/local-components": "^14.0.0",
 		"classnames": "^2.2.6",
 		"dateformat": "^3.0.3",
+		"fs-extra": "^9.0.1",
 		"prop-types": "^15.6.2",
 		"react": "^16.10.2",
 		"react-dom": "^16.10.2",
