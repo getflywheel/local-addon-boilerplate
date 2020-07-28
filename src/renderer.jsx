@@ -2,7 +2,7 @@ import Boilerplate from './Boilerplate';
 import fs from 'fs-extra';
 import path from 'path';
 
-const packageJSON = fs.readJsonSync(path.join(__dirname, '/package.json'));
+const packageJSON = fs.readJsonSync(path.join(__dirname, '../package.json'));
 const addonName = packageJSON['productName'];
 const addonID = packageJSON['slug'];
 
