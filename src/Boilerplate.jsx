@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { ipcRenderer } from 'electron';
+import React, { Component } from "react";
+import { ipcRenderer } from "electron";
 
 // https://getflywheel.github.io/local-addon-api/modules/_local_renderer_.html
-import * as LocalRenderer from '@getflywheel/local/renderer';
+import * as LocalRenderer from "@getflywheel/local/renderer";
 
 // https://github.com/getflywheel/local-components
-import { Button, FlyModal, Title, Text } from '@getflywheel/local-components';
+import { Button, FlyModal, Title, Text } from "@getflywheel/local-components";
 
 export default class Boilerplate extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			siteId: props.match.params.siteID,
+			siteId: props.site?.id,
 			count: this.fetchCount(),
 			showInstructions: false,
 		};
@@ -25,7 +25,7 @@ export default class Boilerplate extends Component {
 	}
 
 	componentDidMount() {
-		ipcRenderer.once('instructions', (event) => {
+		ipcRenderer.once("instructions", (event) => {
 			this.setState({
 				showInstructions: true,
 			});
@@ -33,12 +33,11 @@ export default class Boilerplate extends Component {
 	}
 
 	componentWillUnmount() {
-		ipcRenderer.removeAllListeners('instructions');
+		ipcRenderer.removeAllListeners("instructions");
 	}
 
 	fetchCount() {
-		const site = this.props.sites[this.props.match.params.siteID],
-		return site.count ?? 0;
+		return this.props.site.boilerplateAddon?.count ?? 0;
 	}
 
 	hideInstructions() {
@@ -48,11 +47,7 @@ export default class Boilerplate extends Component {
 	}
 
 	saveCount() {
-		ipcRenderer.send(
-			'save-count',
-			this.state.siteId,
-			this.state.count,
-		);
+		ipcRenderer.send("save-count", this.state.siteId, this.state.count);
 	}
 
 	increaseCount() {
@@ -70,7 +65,7 @@ export default class Boilerplate extends Component {
 	}
 
 	async randomlySetCount() {
-		const newCount = await LocalRenderer.ipcAsync('get-random-count');
+		const newCount = await LocalRenderer.ipcAsync("get-random-count");
 		this.setState({
 			count: newCount,
 		});
@@ -86,39 +81,54 @@ export default class Boilerplate extends Component {
 				isOpen={this.state.showInstructions}
 				onRequestClose={this.hideInstructions}
 			>
-				<Title fontSize='xl'>Boilerplate Add-on</Title>
-				<div style={{padding: '20px'}}>
+				<Title fontSize="xl">Boilerplate Add-on</Title>
+				<div style={{ padding: "20px" }}>
 					<Text
-						fontSize='l'
+						fontSize="l"
 						privateOptions={{
-							fontWeight: 'medium',
+							fontWeight: "medium",
 						}}
 					>
-						You just saved the count for this site! You can exit this add-on and return to find the count will remain the same (but only if you save!).
-						This is a boilerplate add-on to help you get started with development.
-						You will find a few examples in this add-on related to using Local Components, the Local add-on API, and other useful tools for making your add-on awesome!
-						Visit <a href='https://localwp.com/get-involved'>the Local webpage about add-ons</a> for more information about making an add-on for Local.
+						You just saved the count for this site! You can exit
+						this add-on and return to find the count will remain the
+						same (but only if you save!). This is a boilerplate
+						add-on to help you get started with development. You
+						will find a few examples in this add-on related to using
+						Local Components, the Local add-on API, and other useful
+						tools for making your add-on awesome! Visit{" "}
+						<a href="https://localwp.com/get-involved">
+							the Local webpage about add-ons
+						</a>{" "}
+						for more information about making an add-on for Local.
 						We can't wait to see what you create!
 					</Text>
 				</div>
 			</FlyModal>
-		)
+		);
 	}
 
-    render() {
-        return (
-            <div style={{ flex: '1', overflowY: 'auto', margin: '10px' }}>
-                <h2>Hello, World!</h2>
+	render() {
+		return (
+			<div style={{ flex: "1", overflowY: "auto", margin: "10px" }}>
+				<h2>Hello, World!</h2>
 				{this.renderInstructions()}
 				{this.renderCount()}
 				<div>
-					<Button onClick={this.decreaseCount}>Decrement Count</Button> &nbsp;
-					<Button onClick={this.increaseCount}>Increment Count</Button> &nbsp;
-					<Button onClick={this.randomlySetCount}>Randomize Count</Button> &nbsp;
+					<Button onClick={this.decreaseCount}>
+						Decrement Count
+					</Button>{" "}
+					&nbsp;
+					<Button onClick={this.increaseCount}>
+						Increment Count
+					</Button>{" "}
+					&nbsp;
+					<Button onClick={this.randomlySetCount}>
+						Randomize Count
+					</Button>{" "}
+					&nbsp;
 					<Button onClick={this.saveCount}>Save Count</Button>
 				</div>
-            </div>
-        )
-    }
-
+			</div>
+		);
+	}
 }
