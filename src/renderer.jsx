@@ -1,9 +1,9 @@
-import Boilerplate from "./Boilerplate";
-import fs from "fs-extra";
-import path from "path";
+import Boilerplate from './Boilerplate';
+import fs from 'fs-extra';
+import path from 'path';
 
-const packageJSON = fs.readJsonSync(path.join(__dirname, "../package.json"));
-const addonID = packageJSON["slug"];
+const packageJSON = fs.readJsonSync(path.join(__dirname, '../package.json'));
+const addonID = packageJSON.slug;
 
 export default function (context) {
 	const { React, hooks } = context;
@@ -13,16 +13,12 @@ export default function (context) {
 	 *
 	 * The full path would look something like `/main/site-info/:siteID/<below-path-var>`
 	 */
-	hooks.addFilter("siteInfoToolsItem", (menu) => {
-		return [
-			...menu,
-			{
-				menuItem: "Counter",
-				path: `/${addonID}`,
-				render: (props) => {
-					return <Boilerplate {...props} />;
-				},
-			},
-		];
-	});
+	hooks.addFilter('siteInfoToolsItem', (menu) => [
+		...menu,
+		{
+			menuItem: 'Counter',
+			path: `/${addonID}`,
+			render: (props) => <Boilerplate {...props} />,
+		},
+	]);
 }
