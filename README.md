@@ -22,13 +22,13 @@ Clone the repository into the following directory depending on your platform:
 
 ### Install Add-on Dependencies
 
-`yarn install` or `npm install`
+`yarn install`
 
 ### Add Add-on to Local
 
 1. Clone repo directly into the add-ons folder (paths described above)
-2. `yarn install` or `npm install` (install dependencies)
-2. `yarn build` or `npm run build`
+2. `yarn install` (install dependencies)
+2. `yarn build`
 3. Open Local and enable add-on
 
 ## Development
