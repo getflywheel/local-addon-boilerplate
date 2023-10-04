@@ -25,7 +25,7 @@ export default class Boilerplate extends Component {
 	}
 
 	componentDidMount () {
-		ipcRenderer.once('instructions', (event) => {
+		ipcRenderer.once('instructions', () => {
 			this.setState({
 				showInstructions: true,
 			});
