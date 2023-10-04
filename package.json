@@ -27,10 +27,9 @@
 	},
 	"devDependencies": {
 		"@getflywheel/eslint-config-local": "1.0.4",
-		"@getflywheel/local": "^6.6.0",
+		"@getflywheel/local": "^8",
 		"@types/classnames": "^2.2.9",
 		"@types/dateformat": "^3.0.1",
-		"@types/node": "^12.7.12",
 		"eslint": "^5.0.0",
 		"eslint-plugin-import": "^2.14.0",
 		"eslint-plugin-react": "^7.11.1",
@@ -42,7 +41,7 @@
 		"react-router-dom": "^4.3.1"
 	},
 	"dependencies": {
-		"@getflywheel/local-components": "^17.6.3",
+		"@getflywheel/local-components": "^17",
 		"classnames": "^2.2.6",
 		"dateformat": "^3.0.3",
 		"fs-extra": "^9.0.1",
