@@ -28,7 +28,7 @@
 	},
 	"devDependencies": {
 		"@getflywheel/eslint-config-local": "1.0.4",
-		"@getflywheel/local": "^8",
+		"@getflywheel/local": "^9",
 		"@types/classnames": "^2.2.9",
 		"@types/dateformat": "^3.0.1",
 		"@types/react": "^18.2.24",
