@@ -56,6 +56,9 @@
 		"react-dom": "^16.10.2",
 		"react-router-dom": "^5.1.2"
 	},
+	"resolutions": {
+		"trim": "^0.0.3"
+	},
 	"bundledDependencies": [
 		"@getflywheel/local-components",
 		"classnames",
