@@ -28,7 +28,7 @@
 	},
 	"devDependencies": {
 		"@getflywheel/eslint-config-local": "1.0.4",
-		"@getflywheel/local": "^9",
+		"@getflywheel/local": "^10",
 		"@types/classnames": "^2.2.9",
 		"@types/dateformat": "^3.0.1",
 		"@types/react": "^18.2.24",
@@ -57,7 +57,11 @@
 		"react-router-dom": "^5.1.2"
 	},
 	"resolutions": {
-		"trim": "^0.0.3"
+		"trim": "^0.0.3",
+		"minimatch": "^9.0.5",
+		"ajv": "^6.14.0",
+		"flatted": "^3.4.2",
+		"picomatch": "^2.3.2"
 	},
 	"bundledDependencies": [
 		"@getflywheel/local-components",
