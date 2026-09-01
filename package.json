@@ -57,7 +57,8 @@
 		"react-router-dom": "^5.1.2"
 	},
 	"resolutions": {
-		"trim": "^0.0.3"
+		"trim": "^0.0.3",
+		"minimatch": "^9.0.5"
 	},
 	"bundledDependencies": [
 		"@getflywheel/local-components",
