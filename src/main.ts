@@ -1,5 +1,5 @@
 // https://getflywheel.github.io/local-addon-api/modules/_local_main_.html
-import * as Local from '@getflywheel/local';
+import type * as Local from '@getflywheel/local';
 import * as LocalMain from '@getflywheel/local/main';
 
 export default function (context: LocalMain.AddonMainContext): void {
