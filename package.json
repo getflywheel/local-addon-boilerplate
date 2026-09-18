@@ -23,7 +23,7 @@
 	"scripts": {
 		"build": "tsc",
 		"prepare": "tsc",
-		"watch": "yarn run build --watch",
+		"watch": "npm run build -- --watch",
 		"lint": "eslint ."
 	},
 	"devDependencies": {
