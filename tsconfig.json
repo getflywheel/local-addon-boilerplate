@@ -9,13 +9,12 @@
 		"lib": ["es2017", "esnext.asynciterable", "dom"],
 		"module": "commonjs",
 		"noImplicitReturns": true,
-		"noImplicitAny": false,
 		"outDir": "./lib",
 		"resolveJsonModule": true,
 		"rootDir": "./src",
 		"sourceMap": true,
 		"skipLibCheck": true,
-		"strict": false,
+		"strict": true,
 		"target": "es2015"
 	},
 	"exclude": [
