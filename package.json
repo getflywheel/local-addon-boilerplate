@@ -27,16 +27,16 @@
 		"lint": "eslint ."
 	},
 	"devDependencies": {
-		"@getflywheel/eslint-config-local": "1.0.4",
+		"@getflywheel/eslint-config-local": "1.0.5",
 		"@getflywheel/local": "^10",
-		"@types/classnames": "^2.2.9",
+		"@types/classnames": "^2.3.4",
 		"@types/dateformat": "^3.0.1",
 		"@types/react": "^18.2.24",
-		"@typescript-eslint/eslint-plugin": "^6.7.4",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.7.4",
 		"babel-eslint": "^10.1.0",
 		"eslint": "^8.50.0",
-		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-react": "^7.11.1",
 		"typescript": "^4"
 	},
