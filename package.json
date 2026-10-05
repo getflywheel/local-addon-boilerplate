@@ -3,9 +3,7 @@
 	"productName": "Boilerplate",
 	"version": "1.0.0",
 	"author": "Local Team",
-	"keywords": [
-		"local-addon"
-	],
+	"keywords": ["local-addon"],
 	"bgColor": "#51bb7b",
 	"icon": "icon.svg",
 	"slug": "boilerplate",
