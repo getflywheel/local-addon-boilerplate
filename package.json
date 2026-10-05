@@ -62,6 +62,7 @@
 		"prop-types"
 	],
 	"engines": {
-		"local-by-flywheel": "^5.0.0"
+		"node": "^24.18.1",
+		"local-by-flywheel": ">=10.1.2"
 	}
 }
