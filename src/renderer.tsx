@@ -1,6 +1,6 @@
+import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import type { AddonRendererContext } from '@getflywheel/local/renderer';
-import fs from 'fs-extra';
 import React from 'react';
 import Boilerplate, { type BoilerplateProps } from './Boilerplate';
 
@@ -10,7 +10,9 @@ interface SiteInfoMenuItem {
 	render: (props: Record<string, unknown>) => React.ReactElement;
 }
 
-const packageJSON = fs.readJsonSync(path.join(__dirname, '../package.json')) as { slug: string };
+const packageJSON = JSON.parse(readFileSync(path.join(__dirname, '../package.json'), 'utf8')) as {
+	slug: string;
+};
 const addonID = packageJSON.slug;
 
 export default function (context: AddonRendererContext): void {
